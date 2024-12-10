@@ -15,14 +15,14 @@ There are several kind of phenomena we see in the nature which describes or can 
    3. Whereas, backtracking is widely applicable in navigating the maze OR sudoku. We can use these natural problem solving techniques in daa to solve similar kind of problems in algorithmic world
 ### 2. Time and Space efficiency and orders of growth
 Time efficiency is defined as the time taken by algorithm to execute or how long an algorithm takes to execute. Space efficiency is defined as the extra space taken by the algorithm. Importance of time and space efficiency is that when there is a large set of data and if the algorithm is inefficient it might not run properly or it may not give instant outputs(slow processing). The different class of problems are:
-   1.Constant time : The runtime remains the same regardless of the input size.Represented as O(1).
-   2.Logarithmic time : The runtime grows slowly, increasing logarithmically as the input size grows. Represented as O(logn).
-   3.Linear time : The runtime increases proportionally to the input size. Represented as O(n).
-   4.Linearithmic time : The runtime grows faster than linear but slower than quadratic. Represented as O(nlogn).
-   5.Quadratic time : The runtime grows quadratically. Represented as O(n^2)
-   6.Cubic time : The runtime increases even more steeply that quadratic. Represented as O(n^3).
-   7.Exponential time : The runtime grows exponentially, with each additional input. Represented as O(2^n).
-   8.Factorial time : The runtime grows extremely fast.Represented as O(n!).
+   1. Constant time : The runtime remains the same regardless of the input size.Represented as O(1).
+   2. Logarithmic time : The runtime grows slowly, increasing logarithmically as the input size grows. Represented as O(logn).
+   3. Linear time : The runtime increases proportionally to the input size. Represented as O(n).
+   4. Linearithmic time : The runtime grows faster than linear but slower than quadratic. Represented as O(nlogn).
+   5. Quadratic time : The runtime grows quadratically. Represented as O(n^2)
+   6. Cubic time : The runtime increases even more steeply that quadratic. Represented as O(n^3).
+   7. Exponential time : The runtime grows exponentially, with each additional input. Represented as O(2^n).
+   8. Factorial time : The runtime grows extremely fast.Represented as O(n!).
 ### 3. Design Principles
 These principles helps us in problem solving in data structures by relating and breaking down the problem according to the available principles. Also these provides the best efficiency by reduicing space and time complexity. Some principles like partioning allows us to manange different types of large data sets. These principles are reliable and accurate for overcoming the challenges.
 ### 4. Tree Data Structures
