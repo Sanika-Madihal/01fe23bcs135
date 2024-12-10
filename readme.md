@@ -10,9 +10,9 @@
 ## COURSE LEARNING REFLECTIONS
 ### 1. Iteration, Recursion and Bactracking
 There are several kind of phenomena we see in the nature which describes or can be solved using the daa techniques like iteration, recursion and backtracking.
--For instance when it comes to iteration the rise and fall of the tidal waves is one of the best example to explain the iteration process where there is repeated pattern or regularity between each tide.
--Recursion is best described by the pattern of the cauliflower which shows the recursive pattern of the flower from stem to the tips.
--Whereas, backtracking is widely applicable in navigating the maze OR sudoku. We can use these natural problem solving techniques in daa to solve similar kind of problems in algorithmic world
+   1. For instance when it comes to iteration the rise and fall of the tidal waves is one of the best example to explain the iteration process where there is repeated pattern or regularity between each tide.
+   2. Recursion is best described by the pattern of the cauliflower which shows the recursive pattern of the flower from stem to the tips.
+   3. Whereas, backtracking is widely applicable in navigating the maze OR sudoku. We can use these natural problem solving techniques in daa to solve similar kind of problems in algorithmic world
 ### 2. Time and Space efficiency and orders of growth
 Time efficiency is defined as the time taken by algorithm to execute or how long an algorithm takes to execute. Space efficiency is defined as the extra space taken by the algorithm. Importance of time and space efficiency is that when there is a large set of data and if the algorithm is inefficient it might not run properly or it may not give instant outputs(slow processing). The different class of problems are:
    1.Constant time : The runtime remains the same regardless of the input size.Represented as O(1).
