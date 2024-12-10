@@ -33,8 +33,11 @@ The hierarchical data structures like tree are based on parent-child relationshi
    4. Red-Black tree: Even this is used in case of dynamic dataset with less number of rotations.
    5. Heap: This is used in case of problems like maximum/minimum.
    6. Trie: This is based on the prefix of the string. Here string is retrieved by traversing.
-5. Array query algorithms efficiently handle operations like range queries and updates on large datasets with frequent queries. Structures like Segment Trees and Fenwick Trees enable quick range sums and updates in applications such as databases and game score tracking, while Sparse Tables optimize static range queries. By dividing arrays into segments or using pre-computation, these algorithms ensure fast and efficient processing.
-6. Array query algorithms efficiently handle range queries and updates on large datasets using structures like Segment Trees and Fenwick Trees for dynamic queries and Sparse Tables for static queries, optimizing time and space through segmentation or pre-computation. Trees are hierarchical, acyclic structures used in file systems and binary searches, while graphs are general structures with nodes and edges, used in social networks and pathfinding. Trees focus on hierarchy, while graphs handle interconnected relationships.
+### 5. Array Query Algorithm
+Array query algorithms is a technique used to operate arrays efficiently with respect to particular query like update, maximum or minimum.
+These are used to obatin the most efficient algorithm by reducing the complexities and to handle large datasets. Different types of principles used are divide and conquer, lazy propagation, etc. to operate efficiently. Coming to applications we can use fenwick tree, segment tree nad many more for data analysis and dynamic updtaes and also for range queries.
+### 6. Difference between Tree and Graph
+
 ### 7. Sorting and Searching
 Sorting organizes data in a specific order using techniques like bubble, quick, etc.
    1. Bubble sort: It repeatedly swaps the elements which are in wrong order. basic algorithm required to understand sorting
