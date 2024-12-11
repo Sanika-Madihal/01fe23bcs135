@@ -67,3 +67,5 @@ These graph algorithms are widely applicable in real life applications like find
       no like in Floyd's, etc.
    2. Shortest Path: This algorithm is used to find the shortest path between two vertices. For 
       example kruskal's and dijkstra's are used to find the shortest path.
+      
+## **Business cases : SDG Targets and Indicators** 
