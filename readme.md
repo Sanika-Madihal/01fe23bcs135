@@ -35,7 +35,7 @@ The hierarchical data structures like tree are based on parent-child relationshi
    6. Trie: This is based on the prefix of the string. Here string is retrieved by traversing.
 ### 5. Array Query Algorithm
 Array query algorithms is a technique used to operate arrays efficiently with respect to particular query like update, maximum or minimum.
-These are used to obatin the most efficient algorithm by reducing the complexities and to handle large datasets. Different types of principles used are divide and conquer, lazy propagation, etc. to operate efficiently. Coming to applications we can use fenwick tree, segment tree nad many more for data analysis and dynamic updtaes and also for range queries.
+These are used to obatin the most efficient algorithm by reducing the complexities and to handle large datasets. Different types of principles used are divide and conquer, lazy propagation, etc. to operate efficiently. Coming to applications we can use fenwick tree, segment tree and  many moe for data analysis and dynamic updtaes and also for range queries.
 ### 6. Difference between Tree and Graph
 
 ### 7. Sorting and Searching
