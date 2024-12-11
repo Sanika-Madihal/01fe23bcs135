@@ -3,11 +3,12 @@
 ## Handled by SANIKA MADIHAL : 01FE23BCS135
 
 ### Business case identified
-1. Waste management for industries-
+1. **Waste management for industries**
 Chitranagari is a city located in Rajasthan which is facing problems in managing the industrial waste caused by its handicrafts and textile industries and also since it is located near the fields the disposal might be hazardous for crops. The improper disposal of  waste might rise issues like polltuion of water bodies and loss of yield in the fields. This needs a sustainable sensitive waaste management system that helps in maintaining and preserving the clean environment for future generations.
-2. Import and export of goods
+2. **Import and export of goods**
 Since the city Chitranagari is known for its cultural heritage and handicrafts, most of the people's livelyhood depends on the import of raw materials and export of the goods. The main challenges are faced due to lack of networking and limited acces to market data. We need a modern technology import-export system which has the capacity to support Chitranagari's people and make sure that they reach the global markets. 
-3. Improving living standards for farmers
+3. **Improving living standards for farmers**
+The farmers of Chitranagari face significant challenges like both in livelihood and living conditions. Along with irregular rainfall and limited market access, many farmers live in inadequate housing with poor access to basic needs like clean water, electricity, etc. A complete solution is needed to improve both the living conditionds and latest farming techniques, ensuring better livelihoods while preserving the economic sustainability.
 
 ## COURSE LEARNING REFLECTIONS
 ### 1. Iteration, Recursion and Bactracking
