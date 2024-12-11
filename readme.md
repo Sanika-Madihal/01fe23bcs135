@@ -37,6 +37,9 @@ The hierarchical data structures like tree are based on parent-child relationshi
 Array query algorithms is a technique used to operate arrays efficiently with respect to particular query like update, maximum or minimum.
 These are used to obatin the most efficient algorithm by reducing the complexities and to handle large datasets. Different types of principles used are divide and conquer, lazy propagation, etc. to operate efficiently. Coming to applications we can use fenwick tree, segment tree and  many moe for data analysis and dynamic updtaes and also for range queries.
 ### 6. Difference between Tree and Graph
+A tree deosnt have cycles in it and it follows hierarchy. Traversal follows in-order, post-order and pre-order.
+A graph consists of cycles and it doesnt follow hierarchy. Traversal is done thriugh BFS and DFS.
+Application of tree include in searching and sorting of large datasets and also priority queues. Graphs are mainly used in networking and navigation like roadlines airlines, etc.
 
 ### 7. Sorting and Searching
 Sorting organizes data in a specific order using techniques like bubble, quick, etc.
