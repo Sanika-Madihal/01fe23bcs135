@@ -3,7 +3,7 @@
 ## Handled by SANIKA MADIHAL : 01FE23BCS135
 
 ### Business case identified
-1. Waste management for industries
+1. Waste management for industries-
 Chitranagari is a city located in Rajasthan which is facing problems in managing the
 industrial waste caused by its handicrafts and textile industries and also since it is
 located near the fields the disposal might be hazardous for crops. The improper disposal of 
