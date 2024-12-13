@@ -27,8 +27,10 @@ Time efficiency is defined as the time taken by algorithm to execute or how long
 6. Cubic time : The runtime increases even more steeply that quadratic. Represented as O(n^3).
 7. Exponential time : The runtime grows exponentially, with each additional input. Represented as O(2^n).
 8. Factorial time : The runtime grows extremely fast.Represented as O(n!).
+
 ### 3. Design Principles
 These principles helps us in problem solving in data structures by relating and breaking down the problem according to the available principles. Also these provides the best efficiency by reduicing space and time complexity. Some principles like partioning allows us to manange different types of large data sets. These principles are reliable and accurate for overcoming the challenges.
+
 ### 4. Tree Data Structures
 The hierarchical data structures like tree are based on parent-child relationship and these are:
 1. BST: This helps in searching, insertion and deletion of sorted data but sometimes it can be unbalanced affecting the efficiency.
@@ -37,13 +39,16 @@ The hierarchical data structures like tree are based on parent-child relationshi
 4. Red-Black tree: Even this is used in case of dynamic dataset with less number of rotations.
 5. Heap: This is used in case of problems like maximum/minimum.
 6. Trie: This is based on the prefix of the string. Here string is retrieved by traversing.
+
 ### 5. Array Query Algorithm
 Array query algorithms is a technique used to operate arrays efficiently with respect to particular query like update, maximum or minimum.
 These are used to obatin the most efficient algorithm by reducing the complexities and to handle large datasets. Different types of principles used are divide and conquer, lazy propagation, etc. to operate efficiently. Coming to applications we can use fenwick tree, segment tree and  many moe for data analysis and dynamic updtaes and also for range queries.
+
 ### 6. Difference between Tree and Graph
-A tree deosnt have cycles in it and it follows hierarchy. Traversal follows in-order, post-order and pre-order.
+A tree doesnt have cycles in it and it follows hierarchy. Traversal follows in-order, post-order and pre-order.
 A graph consists of cycles and it doesnt follow hierarchy. Traversal is done thriugh BFS and DFS.
 Application of tree include in searching and sorting of large datasets and also priority queues. Graphs are mainly used in networking and navigation like roadlines airlines, etc.
+
 ### 7. Sorting and Searching
 Sorting organizes data in a specific order using techniques like bubble, quick, etc.
    1. Bubble sort: It repeatedly swaps the elements which are in wrong order. basic algorithm required to understand sorting
@@ -57,6 +62,7 @@ Searching refers to finding an element within a data.
    2. Boyer-Moore: This uses bad character and good suffix to skip some comparisions and searches for pattern by comparing from right to left. Searching words in a document
    3. Knuth-Morris-Pratt: Uses prefix and suffix table to skip comparision.
    4. Rabin-Karp: Uses hashing to find a pattern in given text.
+
 ### 8. Spanning Tree and Shortest Path
 These graph algorithms are widely applicable in real life applications like finding the shortest path or in networking world.
    1. Spanning Tree: In this all the vertices are connected with no cycles.
