@@ -75,3 +75,9 @@ These graph algorithms are widely applicable in real life applications like find
       example kruskal's and dijkstra's are used to find the shortest path.
       
 ## **Business cases : SDG Targets and Indicators** 
+1. **Waste management for industries**
+   - **Goal-12** : Responsible consumption and production-Ensuring sustainable consumption and production patterns.
+   - **SDG Target 12.4** :  Achieve the environmentally sound management of chemicals and all wastes throughout their life cycle to minimize adverse impacts on human health and the environment, in accordance with agreed international frameworks.
+   - **SDG Indicator 12.4.2** :  Hazardous waste generated per capita and proportion of hazardous waste treated, by type of treatment.
+  
+  
