@@ -4,56 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAA Course Project</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-color: #282a36; /* Dark purple background */
+            background-color: #282a36;
             color: #f8f8f2;
-            font-family: 'Roboto', sans-serif; /* Merriweather font */
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             padding: 20px;
         }
 
         .highlight {
             font-size: 50px;
-            color: #f8f8f2; /* Yellow color for the statement */
+            color: #f8f8f2;
             font-weight: bold;
         }
 
         h1, h2 {
-            color: #f8f8f2; /* Yellow color for headers */
+            color: #f8f8f2;
             margin-top: 20px;
         }
 
-        /* Style for the Business Cases title */
         .business-cases {
-            font-size: 36px; /* Larger font size */
+            font-size: 36px;
             font-weight: bold;
             text-decoration: underline;
-            color: #f8f8f2; /* Yellow color */
+            color: #f8f8f2;
             margin-top: 20px;
         }
 
-        /* Style for the paragraph below printf */
         .intro-text {
             color: #f8f8f2;
-            font-size: 30px; /* Slightly smaller than the printf line */
+            font-size: 30px;
             font-weight: normal;
             margin-top: 10px;
         }
 
         p {
             margin: 10px 0;
-            font-size: 24px; /* Set description font size */
+            font-size: 24px;
         }
 
         .header-box {
-            background-color: #44475a; /* Slightly lighter purple for boxes */
+            background-color: #44475a;
             padding: 20px;
             margin: 20px 0;
-            border-radius: 10px; /* Rounded corners for the boxes */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #f8f8f2;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
     </style>
 </head>
 <body>
@@ -61,45 +84,72 @@
         <h1>DAA-Course Project</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Course-Reflections.html">Course Reflections</a></li>
-                <li><a href="learning-reflection.html">Learning Reflection</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('course-reflections')">Course Reflections</a></li>
+                <li><a href="#" onclick="showSection('learning-reflection')">Learning Reflection</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="main-header">
+    <!-- Home Section -->
+    <div id="home" class="section active">
         <h1 class="highlight">printf("Hello <s>World</s> Code Creators ! ");</h1>
+        <p class="intro-text">I am Sanika M Madihal, a dedicated Computer Science student at KLE Technological University, Hubballi. I enjoy finding creative solutions to problems and tackling challenges while learning and growing. I am interested in Design and Analysis of Algorithms (DAA) and enjoy exploring problem-solving methods to create efficient solutions. I am committed to learning and growing to make a positive impact in computer science.</p>
     </div>
 
-    <!-- Intro Text Below printf -->
-    <p class="intro-text">I am Sanika M Madihal, a dedicated Computer Science student at KLE Technological University, Hubballi. I enjoy finding creative solutions to problems and tackling challenges while learning and growing. I am interested in Design and Analysis of Algorithms (DAA) and enjoy exploring problem-solving methods to create efficient solutions. I am committed to learning and growing to make a positive impact in computer science.</p>
-    
- <!-- Business Cases Section -->
-    <p class="business-cases">BUSINESS CASES:</p>
+    <!-- Business Cases Section -->
+    <div id="business-cases" class="section">
+        <h2 class="business-cases">BUSINESS CASES:</h2>
 
-    <!-- Added Content -->
-    <div class="header-box">
-        <h1>Waste Management for Industries</h1>
-        <p>
-            Chitranagari is a city located in Rajasthan which is facing problems in managing the industrial waste caused by its handicrafts and textile industries and also since it is located near the fields the disposal might be hazardous for crops. The improper disposal of waste might rise issues like pollution of water bodies and loss of yield in the fields. This needs a sustainable sensitive waste management system that helps in maintaining and preserving the clean environment for future generations.
-        </p>
+        <div class="header-box">
+            <h1>Waste Management for Industries</h1>
+            <p>
+                Chitranagari is a city located in Rajasthan which is facing problems in managing the industrial waste caused by its handicrafts and textile industries and also since it is located near the fields the disposal might be hazardous for crops. The improper disposal of waste might rise issues like pollution of water bodies and loss of yield in the fields. This needs a sustainable sensitive waste management system that helps in maintaining and preserving the clean environment for future generations.
+            </p>
+        </div>
+
+        <div class="header-box">
+            <h1>Import and Export of Goods</h1>
+            <p>
+                Since the city Chitranagari is known for its cultural heritage and handicrafts, most of the people's livelihood depends on the import of raw materials and export of the goods. The main challenges are faced due to lack of networking and limited access to market data. We need a modern technology import-export system which has the capacity to support Chitranagari's people and make sure that they reach the global markets.
+            </p>
+        </div>
+
+        <div class="header-box">
+            <h1>Improving Living Standards for Farmers</h1>
+            <p>
+                The farmers of Chitranagari face significant challenges both in livelihood and living conditions. Along with irregular rainfall and limited market access, many farmers live in inadequate housing with poor access to basic needs like clean water, electricity, etc. A complete solution is needed to improve both the living conditions and latest farming techniques, ensuring better livelihoods while preserving the economic sustainability.
+            </p>
+        </div>
     </div>
 
-    <div class="header-box">
-        <h1>Import and Export of Goods</h1>
-        <p>
-            Since the city Chitranagari is known for its cultural heritage and handicrafts, most of the people's livelihood depends on the import of raw materials and export of the goods. The main challenges are faced due to lack of networking and limited access to market data. We need a modern technology import-export system which has the capacity to support Chitranagari's people and make sure that they reach the global markets.
-        </p>
+    <!-- Course Reflections Section -->
+    <div id="course-reflections" class="section">
+        <h2>Course Learning Outcomes</h2>
+        <!-- Add your course reflection content here -->
     </div>
 
-    <div class="header-box">
-        <h1>Improving Living Standards for Farmers</h1>
-        <p>
-            The farmers of Chitranagari face significant challenges both in livelihood and living conditions. Along with irregular rainfall and limited market access, many farmers live in inadequate housing with poor access to basic needs like clean water, electricity, etc. A complete solution is needed to improve both the living conditions and latest farming techniques, ensuring better livelihoods while preserving the economic sustainability.
-        </p>
+    <!-- Learning Reflection Section -->
+    <div id="learning-reflection" class="section">
+        <h2>Learning Reflection</h2>
+        <!-- Add your learning reflection content here -->
     </div>
 
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: contact@daacourseproject.com</p>
+        <p>Phone: +91 12345 67890</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+        }
+    </script>
 </body>
 </html>
