@@ -340,44 +340,153 @@
         </ul>
     </li>
 </ul>
-
-
-
     
-    <h3>7. Factory Performance Monitoring (Sparse Table, Fenwick Tree)</h3>
-    <p>Monitoring the performance of various factories (e.g., production rates, employee efficiency, or machine performance) can be efficiently handled with data structures that support fast range queries.</p>
-    <h4>Algorithm Implementation:</h4>
-    <ul>
-        <li>Fenwick Tree (also known as a Binary Indexed Tree) can be used for efficient cumulative frequency analysis, helping you track metrics such as total output, machine downtime, or employee hours over time.</li>
-        <li>For static queries over large datasets (e.g., weekly production counts), a sparse table can be implemented to quickly retrieve data over a range without having to perform recalculations.</li>
-    </ul>
+     <h1>Import and Export of Goods</h1>
+<hr>
+<h2>1. Patient Management (Binary Search Tree, AVL Tree)</h2>
+<p><strong>Idea:</strong> Efficient management of patient records for fast access, updates, and deletions.</p>
+<p><strong>Description:</strong></p>
+<ul>
+    <li><strong>Binary Search Tree (BST) and AVL Tree:</strong> Used to store patient records (sorted by patient ID or name), allowing for quick lookups, insertions, and deletions.</li>
+    <li><strong>Design Techniques:</strong>
+        <ul>
+            <li>Divide and Conquer: Divide the search and update operations into subtrees, which are smaller and easier to manage.</li>
+            <li>Space and Time Tradeoff: AVL trees maintain balanced nodes, optimizing search time at the cost of extra memory for balancing operations.</li>
+            <li>Time Efficiency: Search, insert, and delete operations are O(log n) in an AVL tree.</li>
+            <li>Space Efficiency: The space complexity is O(n) as it stores patient records.</li>
+        </ul>
+    </li>
+</ul>
 
-    <h3>8. Employee and Factory Management (List/Stack)</h3>
-    <p>Factories may have dynamic operations that require managing shifts, employee roles, or equipment checks.</p>
-    <h4>Algorithm Implementation:</h4>
-    <ul>
-        <li>Use a list to manage employee data (e.g., shifts, roles, salaries) and update employee details dynamically.</li>
-        <li>Use a stack for reversible tasks like equipment checklists (e.g., last-in, first-out task completion or rollback operations).</li>
-    </ul>
+<h2>2. Emergency Response System (Priority Queue/Heap)</h2>
+<p><strong>Idea:</strong> Prioritize critical patients for emergency treatment.</p>
+<p><strong>Description:</strong></p>
+<ul>
+    <li><strong>Priority Queue (using a Heap):</strong> Prioritizes patients based on the severity of their condition.</li>
+    <li><strong>Design Techniques:</strong>
+        <ul>
+            <li>Greedy Technique: Always choose the most urgent case in each iteration.</li>
+            <li>Time Efficiency: Inserting into and removing from a heap is O(log n).</li>
+            <li>Space Efficiency: The heap uses O(n) space for storing patient data.</li>
+        </ul>
+    </li>
+</ul>
 
-    <h3>9. Industrial Zone Optimization (Brute Force, Sorting Algorithms)</h3>
-    <p>There may be need to optimize industrial zones in terms of factory placement, road layout, or equipment allocation.</p>
-    <h4>Algorithm Implementation:</h4>
-    <ul>
-        <li>Use Brute Force algorithms to test all combinations of zone layouts and equipment placements for efficiency, though this will be computationally expensive.</li>
-        <li>Use sorting algorithms like Merge Sort or Quick Sort to sort zones or factories based on performance metrics (e.g., revenue, number of employees) to help identify the most efficient industrial zones.</li>
-    </ul>
+<h2>3. Healthcare Resource Allocation (Graph, Dijkstra’s Algorithm)</h2>
+<p><strong>Idea:</strong> Allocate resources efficiently by modeling healthcare facilities as a graph.</p>
+<p><strong>Description:</strong></p>
+<ul>
+    <li><strong>Graph Representation:</strong> Nodes represent hospitals and resources; edges represent the availability of connections or resources.</li>
+    <li><strong>Design Techniques:</strong>
+        <ul>
+            <li>Dynamic Programming: Use Dijkstra’s algorithm to find the optimal path between hospitals and resource centers.</li>
+            <li>Time Efficiency: Dijkstra’s algorithm has a time complexity of O(E log V) with a priority queue.</li>
+            <li>Space Efficiency: The space complexity is O(V + E) as it stores the graph and calculates the shortest paths.</li>
+        </ul>
+    </li>
+</ul>
 
-    <h3>10. Urban Traffic Management (BFS/DFS)</h3>
-    <p>For managing traffic flow between industrial zones, Breadth-First Search (BFS) or Depth-First Search (DFS) can be useful to find the most efficient path through the city's road network or find connected routes during peak traffic hours.</p>
-    <h4>Algorithm Implementation:</h4>
-    <ul>
-        <li>BFS can be used to compute the shortest path for vehicles traveling between zones, taking into account different levels of traffic.</li>
-        <li>DFS could be used to explore all possible routes from a starting industrial zone to its suppliers, ensuring redundancy in case of road closures or high traffic.</li>
-    </ul>
-</div>
+<h2>4. Appointment Scheduling (Queue/Linked List)</h2>
+<p><strong>Idea:</strong> Manage and organize patient appointments efficiently.</p>
+<p><strong>Description:</strong></p>
+<ul>
+    <li><strong>Queue:</strong> Patients are processed in the order of their appointment (FIFO).</li>
+    <li><strong>Linked List:</strong> For dynamic appointment scheduling where times can be adjusted or rescheduled.</li>
+    <li><strong>Design Techniques:</strong>
+        <ul>
+            <li>Lazy Propagation: Only update appointment statuses when necessary (e.g., after confirmation).</li>
+            <li>Time Efficiency: O(1) for insertion and deletion in a queue or linked list.</li>
+            <li>Space Efficiency: The space complexity is O(n) as it stores the list of appointments.</li>
+        </ul>
+    </li>
+</ul>
 
+<h2>5. Drug Inventory Management (Hashing, Lookup Table)</h2>
+<p><strong>Idea:</strong> Maintain drug inventory and ensure availability when needed.</p>
+<p><strong>Description:</strong></p>
+<ul>
+    <li><strong>Hashing:</strong> Use hash tables for efficient storage and retrieval of drug information.</li>
+    <li><strong>Lookup Table:</strong> A simple table to store drug details that do not change frequently (like names, dosages, and prices).</li>
+    <li><strong>Design Techniques:</strong>
+        <ul>
+            <li>Space and Time Tradeoff: Hashing offers quick access but requires more memory.</li>
+            <li>Time Efficiency: Hash table lookups are O(1).</li>
+            <li>Space Efficiency: The space complexity is O(n), where n is the number of drugs in the inventory.</li>
+        </ul>
+    </li>
+</ul>
 
+<h2>6. Patient Data Search (Trie, Hashing)</h2>
+<p><strong>Idea:</strong> Implement a fast search system for patient data.</p>
+<p><strong>Description:</strong></p>
+<ul>
+    <li><strong>Trie:</strong> Used for searching patient names or medical conditions based on prefixes.</li>
+    <li><strong>Hashing:</strong> Enables quick lookup of patient records by their unique IDs.</li>
+    <li><strong>Design Techniques:</strong>
+        <ul>
+            <li>Pre-Computing: Precompute and store frequent search queries for fast access.</li>
+            <li>Time Efficiency: Trie operations are O(m), where m is the length of the word, and hash lookups are O(1).</li>
+            <li>Space Efficiency: Tries use O(m * n) space, where m is the average length of the words, and n is the number of words.</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>7. Healthcare Facility Network (Union-Find)</h2>
+<p><strong>Idea:</strong> Track the connectedness of healthcare facilities in the city.</p>
+<p><strong>Description:</strong></p>
+<ul>
+    <li><strong>Union-Find:</strong> Efficiently manage and merge healthcare facilities (hospitals, clinics) as new ones are added to the network.</li>
+    <li><strong>Design Techniques:</strong>
+        <ul>
+            <li>Union-Find is efficient for managing connected components of healthcare facilities.</li>
+            <li>Time Efficiency: The time complexity for union and find operations is O(α(n)), where α is the inverse Ackermann function.</li>
+            <li>Space Efficiency: The space complexity is O(n), as we store the parent-child relationships.</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>8. Hospital Occupancy Tracking (Segment Tree)</h2>
+<p><strong>Idea:</strong> Track room or bed availability in real-time across hospitals.</p>
+<p><strong>Description:</strong></p>
+<ul>
+    <li><strong>Segment Tree:</strong> Allows efficient range queries and updates, useful for tracking room availability over time.</li>
+    <li><strong>Design Techniques:</strong>
+        <ul>
+            <li>Dynamic Programming: Used to update room availability dynamically.</li>
+            <li>Time Efficiency: Query and update operations take O(log n).</li>
+            <li>Space Efficiency: Segment trees use O(n) space.</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>9. Healthcare Data Reporting (Fenwick Tree)</h2>
+<p><strong>Idea:</strong> Generate quick reports on healthcare metrics such as patient visits or treatment data.</p>
+<p><strong>Description:</strong></p>
+<ul>
+    <li><strong>Fenwick Tree:</strong> Efficiently handles cumulative frequency queries, which is useful for tracking healthcare data over time.</li>
+    <li><strong>Design Techniques:</strong>
+        <ul>
+            <li>Pre-Computing: Precompute cumulative data for fast reporting.</li>
+            <li>Time Efficiency: Both updates and queries take O(log n) time.</li>
+            <li>Space Efficiency: The space complexity is O(n).</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>10. Medical Record History (Stack)</h2>
+<p><strong>Idea:</strong> Keep a stack of recent treatments or medical records for each patient.</p>
+<p><strong>Description:</strong></p>
+<ul>
+    <li><strong>Stack:</strong> Track the most recent treatments or records, with the ability to revert to a previous state if necessary.</li>
+    <li><strong>Pattern Recognition:</strong> Repeated actions of adding and removing records in LIFO order.</li>
+    <li><strong>Design Techniques:</strong>
+        <ul>
+            <li>Backtracking: Use a stack for undoing treatments or actions that are not required.</li>
+            <li>Time Efficiency: Both push and pop operations take O(1) time.</li>
+            <li>Space Efficiency: The space complexity is O(n), where n is the number of records.</li>
+        </ul>
+    </li>
+</ul>
 
     <!-- Contact Section -->
     <div id="contact" class="section">
