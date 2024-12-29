@@ -4,11 +4,11 @@
 
 ### Business Cases identified 
 1. **Waste Management for Industries** 
-   - Chitranagari is a city located in Rajasthan which is facing problems in managing the industrial waste caused by its handicrafts and textile industries and also since it is located near the fields the disposal might be hazardous for crops. The improper disposal of waste might rise issues like polltuion of water bodies and loss of yield in the fields. This needs a sustainable sensitive waste management system that helps in maintaining and preserving the clean environment for future generations.
+- Chitranagari is a city located in Rajasthan which is facing problems in managing the industrial waste caused by its handicrafts and textile industries and also since it is located near the fields the disposal might be hazardous for crops. The improper disposal of waste might rise issues like polltuion of water bodies and loss of yield in the fields. This needs a sustainable sensitive waste management system that helps in maintaining and preserving the clean environment for future generations.
 2. **Import and export of goods**
-   - Since the city Chitranagari is known for its cultural heritage and handicrafts, most of the people's livelyhood depends on the import of raw materials and export of the goods. The main challenges are faced due to lack of networking and limited acces to market data. We need a modern technology import-export system which has the capacity to support Chitranagari's people and make sure that they reach the global markets.
+- Since the city Chitranagari is known for its cultural heritage and handicrafts, most of the people's livelyhood depends on the import of raw materials and export of the goods. The main challenges are faced due to lack of networking and limited acces to market data. We need a modern technology import-export system which has the capacity to support Chitranagari's people and make sure that they reach the global markets.
 3. **Improving living standards for farmers**
-   - The farmers of Chitranagari face significant challenges like both in livelihood and living conditions. Along with irregular rainfall and limited market access, many farmers live in inadequate housing with poor access to basic needs like clean water, electricity, etc. A complete solution is needed to improve both the living conditionds and latest farming techniques, ensuring better livelihoods while preserving the economic sustainability.
+- The farmers of Chitranagari face significant challenges like both in livelihood and living conditions. Along with irregular rainfall and limited market access, many farmers live in inadequate housing with poor access to basic needs like clean water, electricity, etc. A complete solution is needed to improve both the living conditionds and latest farming techniques, ensuring better livelihoods while preserving the economic sustainability.
 
 
 ## COURSE LEARNING REFLECTIONS
@@ -70,33 +70,35 @@ These graph algorithms are widely applicable in real life applications like find
 
 ## **Business cases : SDG Targets and Indicators**
 1. **Waste management for industries**
-   - **Goal 12** : Responsible consumption and production-Ensuring sustainable consumption and production patterns.
-   - **SDG Target 12.4** : Achieve the environmentally sound management of chemicals and all wastes throughout their life cycle to minimize adverse impacts on human health and the environment, in accordance with agreed international frameworks.
-   - **SDG Indicator 12.4.2** : Hazardous waste generated per capita and proportion of hazardous waste treated, by type of treatment.
+- **Goal 12** : Responsible consumption and production-Ensuring sustainable consumption and production patterns.
+- **SDG Target 12.4** : Achieve the environmentally sound management of chemicals and all wastes throughout their life cycle to minimize adverse impacts on human health and the environment, in accordance with agreed international frameworks.
+- **SDG Indicator 12.4.2** : Hazardous waste generated per capita and proportion of hazardous waste treated, by type of treatment.
   
-- Here to come up with the solution I've used DIVIDE AND CONQUER technique to decompose the problem into several and parts and then find the solution of these individual problems.
+Here to come up with the solution I've used DIVIDE AND CONQUER technique to decompose the problem into several and parts and then find the solution of these individual problems.
 - Waste Segregation(Trie and Hash Function)
 - Waste Collection(Greedy Technique and Dijkstra's Algorithm)
 - Waste Treatment(Dynamic Programming)
 - Waste Disposal(Backtracking)
 
 2. **Import and export of goods**
-   - **Goal 9**: Industry, Innovation, and Infrastructure. This goal emphasizes building resilient infrastructure, promoting inclusive and sustainable industrialization, and fostering innovation, which directly aligns with improving logistics and trade systems for Chitranagari.
+- **Goal 9**: Industry, Innovation, and Infrastructure. This goal emphasizes building resilient infrastructure, promoting inclusive and sustainable industrialization, and fostering innovation, which directly aligns with improving logistics and trade systems for Chitranagari.
 Relevant SDG Target:
-   - **SDG Target 9.1**: Develop quality, reliable, sustainable, and resilient infrastructure, including regional and transborder infrastructure, to support economic development and human well-being, with a focus on affordable and equitable access for all.
-   - **Indicator 9.1.2**: Passenger and freight volumes, by mode of transport.
-- The proposed solutions for this problem are
+- **SDG Target 9.1**: Develop quality, reliable, sustainable, and resilient infrastructure, including regional and transborder infrastructure, to support economic development and human well-being, with a focus on affordable and equitable access for all.
+- **Indicator 9.1.2**: Passenger and freight volumes, by mode of transport.
+- 
+The proposed solutions for this problem are
 - Building Trade Network(Kruskal's Algorithm)
 - Effective Route Selection(Heap)
 - Load Balancing Across Market(Partitioning)
 
 3. **Improving living standards for farmers**
-   - **Goal-1**: No Poverty – End poverty in all its forms everywhere.
-   - **SDG Target 1.4**: Ensure that all men and women, particularly the poor and the vulnerable, have equal rights to economic resources, as well as access to basic services, ownership, and control over land and other forms of property.
-   - **SDG Indicator 1.4.1**: Proportion of the population living in households with access to basic services.
+- **Goal-1**: No Poverty – End poverty in all its forms everywhere.
+- **SDG Target 1.4**: Ensure that all men and women, particularly the poor and the vulnerable, have equal rights to economic resources, as well as access to basic services, ownership, and control over land and other forms of property.
+- **SDG Indicator 1.4.1**: Proportion of the population living in households with access to basic services.
 Improving farmers' access to basic services like clean water, electricity, and adequate housing alleviates poverty in Chitranagari's rural areas.
 Economic empowerment through sustainable agricultural practices enhances farmers' livelihoods and ensures long-term economic stability.
-- Different approaches through which we can overcome this issue are
+
+Different approaches through which we can overcome this issue are
 - Water Resource Optimization(Segment Trees)
 - Energy Distribution(Fenwick Tree)
 - Efficient Crop Distribution(Heap)
