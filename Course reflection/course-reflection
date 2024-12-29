@@ -1,1 +1,47 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Reflections</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Course Reflections</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#lessons-learned">Lessons Learned</a></li>
+                <li><a href="#future-plans">Future Plans</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="main-header">
+        <h1>DAA Course Project</h1>
+        <p>Exploring the concepts of Data Structures and Algorithms.</p>
+    </section>
+    <div class="header-box">
+        <h1>Introduction</h1>
+        <p>Reflections on the journey through the DAA course.</p>
+    </div>
+    <section id="course-reflections">
+        <h1>Course Reflections</h1>
+        <h2>Key Takeaways</h2>
+        <p>Understanding recursion, iteration, and graph traversal techniques were highlights of this course.</p>
+        <ul>
+            <li><strong>Iteration:</strong> Solving problems efficiently using loops.</li>
+            <li><strong>Recursion:</strong> Breaking problems into sub-problems for a structured approach.</li>
+            <li><strong>Graph Algorithms:</strong> Implementing Dijkstra's and spanning tree algorithms.</li>
+        </ul>
+        <h2>Challenges Faced</h2>
+        <p>The course emphasized optimizing algorithms for space and time efficiency, which was initially challenging but rewarding.</p>
+        <h2>Future Plans</h2>
+        <p>Building real-world projects using the concepts learned in this course.</p>
+    </section>
+    <footer>
+        <p>© 2024 Course Reflections | Designed by Adii</p>
+    </footer>
+</body>
+</html>
