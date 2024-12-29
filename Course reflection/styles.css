@@ -1,7 +1,7 @@
 /* General Body Styling */
 body {
     background-color: #282a36;
-    color: #ffffff; /* Changed to white */
+    color: #f8f8f2;
     font-family: 'Roboto', sans-serif;
     margin-left: 3cm; /* Add 3cm margin on the left */
     margin-right: 3cm; /* Add 3cm margin on the right */
@@ -19,7 +19,7 @@ header {
 }
 
 header h1 {
-    color: #ffffff; /* Changed to white */
+    color: #f8f8f2;
     font-size: 24px;
 }
 
@@ -31,13 +31,13 @@ nav ul {
 }
 
 nav ul li a {
-    color: #ffffff; /* Changed to white */
+    color: #8be9fd; /* Default link color */
     text-decoration: none;
     font-size: 18px;
 }
 
 nav ul li a:hover {
-    color: #ffffff; /* Keep hover color white */
+    color: #ff79c6; /* Hover color for navigation links */
 }
 
 /* Main Header Styling */
@@ -47,13 +47,12 @@ nav ul li a:hover {
 }
 
 .main-header h1 {
-    color: #ffffff; /* Changed to white */
+    color: #8be9fd; /* Updated color for DAA Course Project */
     font-size: 36px;
 }
 
 .main-header p {
     font-size: 18px;
-    color: #ffffff; /* Changed to white */
 }
 
 /* Header and Description Box Styling */
@@ -75,12 +74,12 @@ nav ul li a:hover {
 }
 
 .header-box h1 {
-    color: #ffffff; /* Changed to white */
+    color: #f8f8f2;
 }
 
 .header-box p {
     font-size: 24px;
-    color: #ffffff; /* Changed to white */
+    color: #f8f8f2;
 }
 
 /* Course Reflections Section Styling */
@@ -92,13 +91,13 @@ nav ul li a:hover {
 }
 
 #course-reflections h1 {
-    color: #ffffff; /* Changed to white */
+    color: #f8f8f2;
     font-size: 32px;
     margin-bottom: 20px;
 }
 
 #course-reflections h2 {
-    color: #ffffff; /* Changed to white */
+    color: #ff79c6;
     font-size: 24px;
     margin-top: 20px;
 }
@@ -110,12 +109,11 @@ nav ul li a:hover {
 
 #course-reflections ul li {
     font-size: 18px;
-    color: #ffffff; /* Changed to white */
     margin-bottom: 10px;
 }
 
 #course-reflections ul li strong {
-    color: #ffffff; /* Changed to white */
+    color: #bd93f9;
 }
 
 /* Footer Styling */
@@ -123,7 +121,7 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #44475a;
-    color: #ffffff; /* Changed to white */
+    color: #f8f8f2;
     position: relative;
     bottom: 0;
     width: 100%;
