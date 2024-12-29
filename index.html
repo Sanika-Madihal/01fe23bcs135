@@ -4,53 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAA Course Project</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
     <style>
         body {
-            background-color: #282a36;
+            background-color: #282a36; /* Dark purple background */
             color: #f8f8f2;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto', sans-serif; /* Merriweather font */
             line-height: 1.6;
             padding: 20px;
         }
 
         .highlight {
             font-size: 50px;
-            color: #f8f8f2;
+            color: #f8f8f2; /* Yellow color for the statement */
             font-weight: bold;
         }
 
         h1, h2 {
-            color: #f8f8f2;
+            color: #f8f8f2; /* Yellow color for headers */
             margin-top: 20px;
         }
 
         .business-cases {
-            font-size: 36px;
+            font-size: 36px; /* Larger font size */
             font-weight: bold;
             text-decoration: underline;
-            color: #f8f8f2;
+            color: #f8f8f2; /* Yellow color */
             margin-top: 20px;
         }
 
         .intro-text {
             color: #f8f8f2;
-            font-size: 30px;
+            font-size: 30px; /* Slightly smaller than the printf line */
             font-weight: normal;
             margin-top: 10px;
         }
 
         p {
             margin: 10px 0;
-            font-size: 24px;
+            font-size: 24px; /* Set description font size */
         }
 
         .header-box {
-            background-color: #44475a;
+            background-color: #44475a; /* Slightly lighter purple for boxes */
             padding: 20px;
             margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px; /* Rounded corners for the boxes */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f8f8f2;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #44475a;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
