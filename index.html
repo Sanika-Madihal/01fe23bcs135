@@ -3,135 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAA Course Project</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+    <title>Chitranagari: Smart City Design</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-color: #282a36; /* Dark purple background */
+            background-color: #282a36;
             color: #f8f8f2;
-            font-family: 'Roboto', sans-serif; /* Merriweather font */
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             padding: 20px;
-        }
-
-        .highlight {
-            font-size: 50px;
-            color: #f8f8f2; /* Yellow color for the statement */
-            font-weight: bold;
-        }
-
-        h1, h2 {
-            color: #f8f8f2; /* Yellow color for headers */
-            margin-top: 20px;
-        }
-
-        .business-cases {
-            font-size: 36px; /* Larger font size */
-            font-weight: bold;
-            text-decoration: underline;
-            color: #f8f8f2; /* Yellow color */
-            margin-top: 20px;
-        }
-
-        .intro-text {
-            color: #f8f8f2;
-            font-size: 30px; /* Slightly smaller than the printf line */
-            font-weight: normal;
-            margin-top: 10px;
-        }
-
-        p {
-            margin: 10px 0;
-            font-size: 24px; /* Set description font size */
-        }
-
-        .header-box {
-            background-color: #44475a; /* Slightly lighter purple for boxes */
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px; /* Rounded corners for the boxes */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-        }
-
-        nav {
-            background-color: #333;
-            padding: 10px 0;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
-            text-align: center;
-            margin: 0;
         }
 
         nav ul li {
-            display: inline-block;
-            margin: 0 15px;
+            display: inline;
+            margin-right: 20px;
         }
 
         nav ul li a {
             color: #f8f8f2;
             text-decoration: none;
             font-size: 18px;
-            padding: 10px;
         }
 
-        nav ul li a:hover {
-            background-color: #44475a;
-            border-radius: 5px;
+        .section {
+            display: none;
         }
 
-        @media (max-width: 768px) {
-            nav ul li {
-                display: block;
-                margin-bottom: 10px;
-            }
+        .section.active {
+            display: block;
+        }
+
+        .highlight {
+            font-size: 50px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>DAA-Course Project</h1>
+        <h1>Chitranagari: Smart City Design</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Course-Reflections.html">Course Reflections</a></li>
-                <li><a href="SDG-mapping.html">SDG Mapping</a></li>
-                <li><a href="implementation.html">Implementation</a></li>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('business-cases')">Business Cases</a></li>
+                <li><a href="#" onclick="showSection('course-reflections')">Course Reflections</a></li>
+                <li><a href="#" onclick="showSection('sdg-mapping')">SDG Mapping</a></li>
+                <li><a href="#" onclick="showSection('implementation')">Implementation</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="main-header">
-        <h1 class="highlight">printf("Hello <s>World</s> Code Creators ! ");</h1>
+    <!-- Home Section -->
+    <div id="home" class="section active">
+        <h2>Welcome to Chitranagari</h2>
+        <p>Chitranagari is a forward-thinking city aiming to become a model for smart urban development. Explore the business cases, course reflections, and more!</p>
     </div>
-
-    <!-- Intro Text Below printf -->
-    <p class="intro-text">I am Sanika M Madihal, a dedicated Computer Science student at KLE Technological University, Hubballi. I enjoy finding creative solutions to problems and tackling challenges while learning and growing. I am interested in Design and Analysis of Algorithms (DAA) and enjoy exploring problem-solving methods to create efficient solutions. I am committed to learning and growing to make a positive impact in computer science.</p>
 
     <!-- Business Cases Section -->
-    <p class="business-cases">BUSINESS CASES:</p>
+    <div id="business-cases" class="section">
+        <h2>Business Cases Identified by Aditi Choudhary (01FE23BCS128)</h2>
 
-    <div class="header-box">
-        <h1>Waste Management for Industries ♻️</h1>
-        <p>
-            Chitranagari, a city located in Rajasthan, faces problems in managing industrial waste from handicrafts and textile industries. Improper waste disposal may harm crops, pollute water bodies, and affect the environment. This business case focuses on designing a sustainable and efficient waste management system that can preserve the environment for future generations.
-        </p>
+        <h3>1. Waste Management for Industries 🏭</h3>
+        <p>Chitranagari is a city located in Rajasthan that is facing challenges in managing the industrial waste caused by its handicrafts and textile industries. Additionally, the city's proximity to the fields adds further complexity to the situation.</p>
+
+        <h4>Why is this important?</h4>
+        <ul>
+            <li>Proper waste management is essential for preventing environmental degradation and maintaining the health of the local population.</li>
+            <li>With the growing industrial activities, the need for sustainable waste disposal solutions is critical to the city’s future.</li>
+        </ul>
+        <p>Chitranagari is committed to developing advanced waste management strategies, utilizing technology such as smart waste bins, efficient recycling processes, and sustainable disposal techniques. This initiative aims to reduce the ecological footprint of industrial waste while promoting a cleaner, healthier environment for residents and workers alike.</p>
+
+        <h3>2. Import and Export of Goods 🌍</h3>
+        <p>Since the city Chitranagari is known for its cultural heritage and handicrafts, most of the people's livelihood depends on the import of raw materials and export of the goods. The main challenges are faced due to lack of networking and limited access to market data.</p>
+
+        <h4>Why is this important?</h4>
+        <ul>
+            <li>A robust import-export system ensures sustainability for the city’s economic backbone: its people.</li>
+            <li>Access to global markets will boost incomes and provide greater financial security.</li>
+        </ul>
+        <p>We need a modern technology-driven import-export system that has the capacity to support Chitranagari's people and make sure that they reach the global markets. This includes providing real-time market data, improving logistics, and establishing networks to strengthen the local economy.</p>
+
+        <h3>3. Improving Living Standards for Farmers 🌾</h3>
+        <p>The farmers of Chitranagari face significant challenges in both livelihood and living conditions. Along with irregular rainfall and limited market access, many farmers live in inadequate housing with poor access to basic needs like clean water, electricity, etc.</p>
+
+        <h4>Why is this important?</h4>
+        <ul>
+            <li>Farmers form the backbone of Chitranagari's economy, and their prosperity is crucial for the city's growth.</li>
+            <li>Improving living conditions will lead to better productivity and sustainability in agriculture.</li>
+        </ul>
+        <p>A complete solution is needed to improve both the living conditions and the adoption of the latest farming techniques, ensuring better livelihoods while preserving economic sustainability. By focusing on infrastructural improvements and training programs, Chitranagari can secure its future as a prosperous city.</p>
     </div>
 
-    <div class="header-box">
-        <h1>Import and Export of Goods 🌍</h1>
-        <p>
-            Chitranagari's economy heavily relies on the import of raw materials and export of handicraft products. However, challenges arise due to limited access to market data and poor networking. This business case suggests the development of a modern import-export system that can better connect the city's traders with global markets and improve their business outcomes.
-        </p>
+    <!-- Course Reflections Section -->
+    <div id="course-reflections" class="section">
+        <h2>Course Learning Outcomes</h2>
+        <!-- Course Reflections Content -->
     </div>
 
-    <div class="header-box">
-        <h1>Improving Living Standards for Farmers 🌾</h1>
-        <p>
-            Farmers in Chitranagari face challenges such as irregular rainfall, limited market access, and poor living conditions. This business case aims to create solutions that enhance both the living conditions of farmers and the agricultural techniques they use. By improving infrastructure, housing, and access to resources, this project will ensure better livelihoods and economic sustainability for farmers.
-        </p>
+    <!-- SDG Mapping Section -->
+    <div id="sdg-mapping" class="section">
+        <h2>SDG Mapping</h2>
+        <!-- SDG Mapping Content -->
     </div>
+
+    <!-- Implementation Section -->
+    <div id="implementation" class="section">
+        <h2>Implementation Strategy</h2>
+        <!-- Implementation Strategy Content -->
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+        <h2>Contact</h2>
+        <!-- Contact Content -->
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
