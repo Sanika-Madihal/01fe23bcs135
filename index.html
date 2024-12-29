@@ -343,136 +343,59 @@
     
      <h1>Import and Export of Goods</h1>
 <hr>
-<h2>1. Patient Management (Binary Search Tree, AVL Tree)</h2>
-<p><strong>Idea:</strong> Efficient management of patient records for fast access, updates, and deletions.</p>
+<h2>1. Building a Trade Network (Kruskal’s Algorithm)</h2>
+<p><strong>Idea:</strong> Optimize the trade network in Chitranagari by connecting trade hubs efficiently to minimize transportation costs and improve accessibility.</p>
 <p><strong>Description:</strong></p>
 <ul>
-    <li><strong>Binary Search Tree (BST) and AVL Tree:</strong> Used to store patient records (sorted by patient ID or name), allowing for quick lookups, insertions, and deletions.</li>
-    <li><strong>Design Techniques:</strong>
+    <li><strong>Implementation:</strong>
         <ul>
-            <li>Divide and Conquer: Divide the search and update operations into subtrees, which are smaller and easier to manage.</li>
-            <li>Space and Time Tradeoff: AVL trees maintain balanced nodes, optimizing search time at the cost of extra memory for balancing operations.</li>
-            <li>Time Efficiency: Search, insert, and delete operations are O(log n) in an AVL tree.</li>
-            <li>Space Efficiency: The space complexity is O(n) as it stores patient records.</li>
+            <li>Represent trade hubs as nodes and transportation routes as edges, weighted by costs.</li>
+            <li>Sort all edges (routes) by weight (cost).</li>
+            <li>Add edges to the Minimum Spanning Tree (MST) one by one, ensuring no cycles are formed, until all nodes are connected.</li>
+        </ul>
+    </li>
+    <li><strong>Complexities:</strong>
+        <ul>
+            <li><strong>Graph Representation:</strong> Requires <code>O(E)</code> time and <code>O(V + E)</code> space.</li>
+            <li><strong>Sorting Edges:</strong> Takes <code>O(E log E)</code> time and <code>O(E)</code> space.</li>
+            <li><strong>Union-Find Operations:</strong> Used for cycle detection with a time complexity of <code>O(E ⋅ α(V))</code>, where <code>α(V)</code> is the inverse Ackermann function, and a space complexity of <code>O(V)</code>.</li>
+            <li><strong>Total Time Complexity:</strong> <code>O(E log E)</code>.</li>
+            <li><strong>Total Space Complexity:</strong> <code>O(V + E)</code>.</li>
         </ul>
     </li>
 </ul>
 
-<h2>2. Emergency Response System (Priority Queue/Heap)</h2>
-<p><strong>Idea:</strong> Prioritize critical patients for emergency treatment.</p>
+<h2>2. Cost-Effective Route Selection (Heap)</h2>
+<p><strong>Idea:</strong> Optimize operational logistics by selecting daily transport routes or scheduling shipments in a cost-effective manner using a Min-Heap.</p>
 <p><strong>Description:</strong></p>
 <ul>
-    <li><strong>Priority Queue (using a Heap):</strong> Prioritizes patients based on the severity of their condition.</li>
-    <li><strong>Design Techniques:</strong>
+    <li><strong>Implementation:</strong>
         <ul>
-            <li>Greedy Technique: Always choose the most urgent case in each iteration.</li>
-            <li>Time Efficiency: Inserting into and removing from a heap is O(log n).</li>
-            <li>Space Efficiency: The heap uses O(n) space for storing patient data.</li>
+            <li>Use a Min-Heap to store all transport routes, where the smallest cost route is always at the root.</li>
+            <li>Continuously extract and prioritize the cheaper routes, reducing overall transportation expenses.</li>
         </ul>
     </li>
 </ul>
 
-<h2>3. Healthcare Resource Allocation (Graph, Dijkstra’s Algorithm)</h2>
-<p><strong>Idea:</strong> Allocate resources efficiently by modeling healthcare facilities as a graph.</p>
+<h2>3. Load Balancing Across Markets (Partitioning)</h2>
+<p><strong>Idea:</strong> Address unequal demand for textiles and handicrafts in different regions by partitioning markets to ensure equitable distribution of resources and smooth operations.</p>
 <p><strong>Description:</strong></p>
 <ul>
-    <li><strong>Graph Representation:</strong> Nodes represent hospitals and resources; edges represent the availability of connections or resources.</li>
-    <li><strong>Design Techniques:</strong>
+    <li><strong>Implementation:</strong>
         <ul>
-            <li>Dynamic Programming: Use Dijkstra’s algorithm to find the optimal path between hospitals and resource centers.</li>
-            <li>Time Efficiency: Dijkstra’s algorithm has a time complexity of O(E log V) with a priority queue.</li>
-            <li>Space Efficiency: The space complexity is O(V + E) as it stores the graph and calculates the shortest paths.</li>
+            <li>Divide markets into high-demand and low-demand groups based on historical data.</li>
+            <li>Assign more vehicles, workforce, and inventory to high-demand hubs.</li>
+            <li>Gradually shift resources from low-demand hubs as needed.</li>
         </ul>
     </li>
 </ul>
 
-<h2>4. Appointment Scheduling (Queue/Linked List)</h2>
-<p><strong>Idea:</strong> Manage and organize patient appointments efficiently.</p>
-<p><strong>Description:</strong></p>
-<ul>
-    <li><strong>Queue:</strong> Patients are processed in the order of their appointment (FIFO).</li>
-    <li><strong>Linked List:</strong> For dynamic appointment scheduling where times can be adjusted or rescheduled.</li>
-    <li><strong>Design Techniques:</strong>
-        <ul>
-            <li>Lazy Propagation: Only update appointment statuses when necessary (e.g., after confirmation).</li>
-            <li>Time Efficiency: O(1) for insertion and deletion in a queue or linked list.</li>
-            <li>Space Efficiency: The space complexity is O(n) as it stores the list of appointments.</li>
-        </ul>
-    </li>
-</ul>
 
-<h2>5. Drug Inventory Management (Hashing, Lookup Table)</h2>
-<p><strong>Idea:</strong> Maintain drug inventory and ensure availability when needed.</p>
-<p><strong>Description:</strong></p>
-<ul>
-    <li><strong>Hashing:</strong> Use hash tables for efficient storage and retrieval of drug information.</li>
-    <li><strong>Lookup Table:</strong> A simple table to store drug details that do not change frequently (like names, dosages, and prices).</li>
-    <li><strong>Design Techniques:</strong>
-        <ul>
-            <li>Space and Time Tradeoff: Hashing offers quick access but requires more memory.</li>
-            <li>Time Efficiency: Hash table lookups are O(1).</li>
-            <li>Space Efficiency: The space complexity is O(n), where n is the number of drugs in the inventory.</li>
-        </ul>
-    </li>
-</ul>
 
-<h2>6. Patient Data Search (Trie, Hashing)</h2>
-<p><strong>Idea:</strong> Implement a fast search system for patient data.</p>
-<p><strong>Description:</strong></p>
-<ul>
-    <li><strong>Trie:</strong> Used for searching patient names or medical conditions based on prefixes.</li>
-    <li><strong>Hashing:</strong> Enables quick lookup of patient records by their unique IDs.</li>
-    <li><strong>Design Techniques:</strong>
-        <ul>
-            <li>Pre-Computing: Precompute and store frequent search queries for fast access.</li>
-            <li>Time Efficiency: Trie operations are O(m), where m is the length of the word, and hash lookups are O(1).</li>
-            <li>Space Efficiency: Tries use O(m * n) space, where m is the average length of the words, and n is the number of words.</li>
-        </ul>
-    </li>
-</ul>
 
-<h2>7. Healthcare Facility Network (Union-Find)</h2>
-<p><strong>Idea:</strong> Track the connectedness of healthcare facilities in the city.</p>
-<p><strong>Description:</strong></p>
-<ul>
-    <li><strong>Union-Find:</strong> Efficiently manage and merge healthcare facilities (hospitals, clinics) as new ones are added to the network.</li>
-    <li><strong>Design Techniques:</strong>
-        <ul>
-            <li>Union-Find is efficient for managing connected components of healthcare facilities.</li>
-            <li>Time Efficiency: The time complexity for union and find operations is O(α(n)), where α is the inverse Ackermann function.</li>
-            <li>Space Efficiency: The space complexity is O(n), as we store the parent-child relationships.</li>
-        </ul>
-    </li>
-</ul>
 
-<h2>8. Hospital Occupancy Tracking (Segment Tree)</h2>
-<p><strong>Idea:</strong> Track room or bed availability in real-time across hospitals.</p>
-<p><strong>Description:</strong></p>
-<ul>
-    <li><strong>Segment Tree:</strong> Allows efficient range queries and updates, useful for tracking room availability over time.</li>
-    <li><strong>Design Techniques:</strong>
-        <ul>
-            <li>Dynamic Programming: Used to update room availability dynamically.</li>
-            <li>Time Efficiency: Query and update operations take O(log n).</li>
-            <li>Space Efficiency: Segment trees use O(n) space.</li>
-        </ul>
-    </li>
-</ul>
 
-<h2>9. Healthcare Data Reporting (Fenwick Tree)</h2>
-<p><strong>Idea:</strong> Generate quick reports on healthcare metrics such as patient visits or treatment data.</p>
-<p><strong>Description:</strong></p>
-<ul>
-    <li><strong>Fenwick Tree:</strong> Efficiently handles cumulative frequency queries, which is useful for tracking healthcare data over time.</li>
-    <li><strong>Design Techniques:</strong>
-        <ul>
-            <li>Pre-Computing: Precompute cumulative data for fast reporting.</li>
-            <li>Time Efficiency: Both updates and queries take O(log n) time.</li>
-            <li>Space Efficiency: The space complexity is O(n).</li>
-        </ul>
-    </li>
-</ul>
-
+    
 <h2>10. Medical Record History (Stack)</h2>
 <p><strong>Idea:</strong> Keep a stack of recent treatments or medical records for each patient.</p>
 <p><strong>Description:</strong></p>
