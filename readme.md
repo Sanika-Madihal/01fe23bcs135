@@ -57,7 +57,9 @@ Sorting organizes data in a specific order using techniques like bubble, quick, 
 - Insertion sort: Sorted array is obtained by inserting elemnts in the correct position. Sorting of numbered cards.
 - Merge sort: Firstly divides the array into half, sorts and then merges them. Used to sort large files or datasets.
 - Qucik sort: Uses pivot to partition the data and then sorts recursively.
-- Heap sort: Builds a max or min heap and extracts the root to obtain sorted array. Searching refers to finding an element within a data. 1.BFSS: It uses queue to manage nodes and goes level by level in a graph. Used to find paths in map.
+- Heap sort: Builds a max or min heap and extracts the root to obtain sorted array.
+Searching refers to finding an element within a data.
+- BFSS: It uses queue to manage nodes and goes level by level in a graph. Used to find paths in map.
 - Boyer-Moore: This uses bad character and good suffix to skip some comparisions and searches for pattern by comparing from right to left. Searching words in a document
 - Knuth-Morris-Pratt: Uses prefix and suffix table to skip comparision.
 - Rabin-Karp: Uses hashing to find a pattern in given text.
