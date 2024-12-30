@@ -1,0 +1,59 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class FenwickTree {
+    vector<int> bit;
+    vector<int> lazy;
+    int n;
+public:
+    FenwickTree(int size) {
+        n = size;
+        bit.assign(n + 1, 0);
+        lazy.assign(n + 1, 0);  
+    }
+    void update(int k, int delta) {
+        for (; k <= n; k += (k & -k)) {
+            bit[k] += delta; 
+        }
+    }
+    void rangeUpdate(int l, int r, int delta) {
+        updateRange(l, delta);
+        updateRange(r + 1, -delta);
+    }
+    void updateRange(int k, int delta) {
+        for (; k <= n; k += (k & -k)) {
+            bit[k] += delta;
+        }
+    }
+    int query(int k) {
+        int sum = 0;
+        for (; k > 0; k -= (k & -k)) {
+            sum += bit[k];
+        }
+        return sum;
+    }
+    int rangeQuery(int l, int r) {
+        return query(r) - query(l - 1);
+    }
+    void display() {
+        for (int i = 1; i <= n; ++i) {
+            cout << "Index " << i << ": " << query(i) << endl;
+        }
+    }
+};
+
+int main() {
+    int n = 5; 
+    FenwickTree ft(n);
+    ft.update(1, 10);  
+    ft.update(2, 5); 
+    ft.update(3, 20); 
+    ft.update(4, 15); 
+    ft.update(5, 30);
+    cout << "Pollution level at Zone 3: " << ft.query(3) << endl;
+    cout << "Total pollution from Zone 2 to Zone 4: " << ft.rangeQuery(2, 4) << endl;
+    ft.update(3, 10);
+    cout << "After discharge, pollution level at Zone 3: " << ft.query(3) << endl;
+    return 0;
+}
