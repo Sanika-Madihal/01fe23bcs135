@@ -1,0 +1,76 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+const int ALPHABET_SIZE = 26;
+class TrieNode {
+public:
+    TrieNode* children[ALPHABET_SIZE];
+    bool isEndOfWord;
+    TrieNode() {
+        isEndOfWord = false;
+        for (int i = 0; i < ALPHABET_SIZE; ++i) {
+            children[i] = nullptr;
+        }
+    }
+};
+class Trie {
+private:
+    TrieNode* root;
+public:
+    Trie() {
+        root = new TrieNode();
+    }
+    void insert(const string& wasteCategory) {
+        TrieNode* node = root;
+        for (char c : wasteCategory) {
+            int index = c - 'a';
+            if (node->children[index] == nullptr) {
+                node->children[index] = new TrieNode();
+            }
+            node = node->children[index];
+        }
+        node->isEndOfWord = true;
+    }
+    bool search(const string& wasteCategory) {
+        TrieNode* node = root;
+        for (char c : wasteCategory) {
+            int index = c - 'a';
+            if (node->children[index] == nullptr) {
+                return false;
+            }
+            node = node->children[index];
+        }
+        return node->isEndOfWord;
+    }
+    bool startsWith(const string& prefix) {
+        TrieNode* node = root;
+        for (char c : prefix) {
+            int index = c - 'a';
+            if (node->children[index] == nullptr) {
+                return false;
+            }
+            node = node->children[index];
+        }
+        return true; 
+    }
+};
+int main() {
+    Trie trie;
+    trie.insert("industrial_waste");
+    trie.insert("handicrafts_dyes");
+    trie.insert("textiles_fabric");
+    trie.insert("chemical_waste");
+    trie.insert("solid_waste");
+    trie.insert("liquid_waste");
+    cout << "Search for 'industrial_waste': " << (trie.search("industrial_waste") ? "Found" : "Not Found") << endl;
+    cout << "Search for 'handicrafts_dyes': " << (trie.search("handicrafts_dyes") ? "Found" : "Not Found") << endl;
+    cout << "Search for 'textiles_fabric': " << (trie.search("textiles_fabric") ? "Found" : "Not Found") << endl;
+    cout << "Search for 'chemical_waste': " << (trie.search("chemical_waste") ? "Found" : "Not Found") << endl;
+    cout << "Search for 'solid_waste': " << (trie.search("solid_waste") ? "Found" : "Not Found") << endl;
+    cout << "Search for 'liquid_waste': " << (trie.search("liquid_waste") ? "Found" : "Not Found") << endl;
+    cout << "Prefix 'handicrafts' exists: " << (trie.startsWith("handicrafts") ? "Yes" : "No") << endl;
+    cout << "Prefix 'textiles' exists: " << (trie.startsWith("textiles") ? "Yes" : "No") << endl;
+    cout << "Prefix 'waste' exists: " << (trie.startsWith("waste") ? "Yes" : "No") << endl;
+    return 0;
+}
