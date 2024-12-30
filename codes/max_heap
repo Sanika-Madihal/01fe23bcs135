@@ -7,19 +7,21 @@ struct Crop {
     int demand;
 };
 bool operator>(const Crop& a, const Crop& b) {
-    return a.demand > b.demand; 
+    return a.demand > b.demand;
 }
 void heapify(vector<Crop>& heap, int n, int i) {
-    int largest = i;
-    int left = 2 * i + 1;
-    int right = 2 * i + 2;
-    if (left < n && heap[left] > heap[largest])
+    int largest = i;          
+    int left = 2 * i + 1;       
+    int right = 2 * i + 2;   
+    if (left < n && heap[left] > heap[largest]) {
         largest = left;
-    if (right < n && heap[right] > heap[largest])
+    }
+    if (right < n && heap[right] > heap[largest]) {
         largest = right;
+    }
     if (largest != i) {
         swap(heap[i], heap[largest]);
-        heapify(heap, n, largest);
+        heapify(heap, n, largest);  
     }
 }
 void heapSort(vector<Crop>& heap, int n) {
