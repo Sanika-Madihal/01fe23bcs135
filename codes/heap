@@ -1,0 +1,57 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+struct Route {
+    string src, dest;
+    int cost;
+};
+void heapify(vector<Route>& heap, int n, int i) {
+    int smallest = i;
+    int left = 2 * i + 1;
+    int right = 2 * i + 2;
+    if (left < n && heap[left].cost < heap[smallest].cost)
+        smallest = left;
+    if (right < n && heap[right].cost < heap[smallest].cost)
+        smallest = right;
+    if (smallest != i) {
+        swap(heap[i], heap[smallest]);
+        heapify(heap, n, smallest);
+    }
+}
+void heapSort(vector<Route>& heap) {
+    int n = heap.size();
+    for (int i = n / 2 - 1; i >= 0; i--)
+        heapify(heap, n, i);
+    for (int i = n - 1; i > 0; i--) {
+        swap(heap[0], heap[i]);
+        heapify(heap, i, 0);
+    }
+}
+void printRoutes(const vector<Route>& heap) {
+    for (const auto& route : heap) {
+        cout << route.src << " ↔ " << route.dest << ": " << route.cost << endl;
+    }
+}
+int main() {
+    vector<Route> routes = {
+        {"Chitranagari", "Hub A", 10},
+        {"Hub A", "Hub B", 15},
+        {"Chitranagari", "Hub C", 20},
+        {"Hub B", "Hub C", 25}
+    };
+    cout << "Initial Routes (Min-Heap):" << endl;
+    printRoutes(routes);
+    heapSort(routes);
+    cout << "\nSorted Routes (Cost-Effective Scheduling):" << endl;
+    printRoutes(routes);
+    cout << "\nSelected Routes for Scheduling (min cost first):" << endl;
+    while (!routes.empty()) {
+        Route minRoute = routes[0];
+        cout << "Scheduling route: " << minRoute.src << " ↔ " << minRoute.dest << " with cost = " << minRoute.cost << endl;
+        routes.erase(routes.begin());
+        heapify(routes, routes.size(), 0); 
+    }
+    return 0;
+}
