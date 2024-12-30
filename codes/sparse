@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+#include <climits>
+using namespace std;
+void buildSparseTable(int arr[], int n, int st[][20]) {
+    for (int i = 0; i < n; i++) {
+        st[i][0] = arr[i];
+    }
+    for (int j = 1; (1 << j) <= n; j++) {
+        for (int i = 0; i + (1 << j) - 1 < n; i++) {
+            st[i][j] = min(st[i][j - 1], st[i + (1 << (j - 1))][j - 1]);
+        }
+    }
+}
+int query(int st[][20], int L, int R) {
+    int len = R - L + 1;
+    int k = log2(len);  
+    return min(st[L][k], st[R - (1 << k) + 1][k]);
+}
+int main() {
+    int arr[] = {1500, 2000, 1800, 2200, 2400, 2100, 1900, 2300, 2500}; 
+    int n = sizeof(arr) / sizeof(arr[0]); 
+    int st[n][20]; 
+    buildSparseTable(arr, n, st);
+    cout << "Minimum value in the range [1, 4]: " << query(st, 1, 4) << endl;
+    cout << "Minimum value in the range [0, 8]: " << query(st, 0, 8) << endl;
+    return 0;
+}
