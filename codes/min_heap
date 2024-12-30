@@ -9,7 +9,7 @@ struct Route {
 };
 void heapify(vector<Route>& heap, int n, int i) {
     int smallest = i;
-    int left = 2 * i + 1;
+    int left = 2 * i + 1; 
     int right = 2 * i + 2;
     if (left < n && heap[left].cost < heap[smallest].cost)
         smallest = left;
@@ -26,7 +26,7 @@ void heapSort(vector<Route>& heap) {
         heapify(heap, n, i);
     for (int i = n - 1; i > 0; i--) {
         swap(heap[0], heap[i]);
-        heapify(heap, i, 0);
+        heapify(heap, i, 0);  
     }
 }
 void printRoutes(const vector<Route>& heap) {
@@ -50,8 +50,9 @@ int main() {
     while (!routes.empty()) {
         Route minRoute = routes[0];
         cout << "Scheduling route: " << minRoute.src << " ↔ " << minRoute.dest << " with cost = " << minRoute.cost << endl;
-        routes.erase(routes.begin());
-        heapify(routes, routes.size(), 0); 
+        routes[0] = routes.back();
+        routes.pop_back();
+        heapify(routes, routes.size(), 0);
     }
     return 0;
 }
