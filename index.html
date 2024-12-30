@@ -390,50 +390,89 @@
      <h1>Import and Export of Goods</h1>
 <hr>
 <h2>1. Building a Trade Network (Kruskal’s Algorithm)</h2>
-<p><strong>Idea:</strong> Optimize the trade network in Chitranagari by connecting trade hubs efficiently to minimize transportation costs and improve accessibility.</p>
+<p><strong>Idea:</strong> Efficiently connect trade hubs in Chitranagari to distribute goods like textiles and handicrafts, minimizing transportation costs and improving accessibility.</p>
 <p><strong>Description:</strong></p>
 <ul>
-    <li><strong>Implementation:</strong>
+    <li><strong>Kruskal’s Algorithm:</strong>
         <ul>
-            <li>Represent trade hubs as nodes and transportation routes as edges, weighted by costs.</li>
-            <li>Sort all edges (routes) by weight (cost).</li>
-            <li>Add edges to the Minimum Spanning Tree (MST) one by one, ensuring no cycles are formed, until all nodes are connected.</li>
+            <li><strong>Nodes:</strong> Represent trade hubs.</li>
+            <li><strong>Edges:</strong> Represent transportation routes, weighted by costs.</li>
+            <li><strong>Process:</strong>
+                <ul>
+                    <li>Sort all edges (routes) by weight (cost).</li>
+                    <li>Add edges to the Minimum Spanning Tree (MST) one by one, ensuring no cycles are formed.</li>
+                    <li>Continue until all nodes are connected.</li>
+                </ul>
+            </li>
         </ul>
     </li>
-    <li><strong>Complexities:</strong>
-        <ul>
-            <li><strong>Graph Representation:</strong> Requires <code>O(E)</code> time and <code>O(V + E)</code> space.</li>
-            <li><strong>Sorting Edges:</strong> Takes <code>O(E log E)</code> time and <code>O(E)</code> space.</li>
-            <li><strong>Union-Find Operations:</strong> Used for cycle detection with a time complexity of <code>O(E ⋅ α(V))</code>, where <code>α(V)</code> is the inverse Ackermann function, and a space complexity of <code>O(V)</code>.</li>
-            <li><strong>Total Time Complexity:</strong> <code>O(E log E)</code>.</li>
-            <li><strong>Total Space Complexity:</strong> <code>O(V + E)</code>.</li>
-        </ul>
-    </li>
+    <li><strong>Efficiency:</strong></li>
+    <ul>
+        <li><strong>Graph Representation:</strong> Requires <code>O(E)</code> time and <code>O(V+E)</code> space.</li>
+        <li><strong>Sorting Edges:</strong> Takes <code>O(E log E)</code> time and <code>O(E)</code> space.</li>
+        <li><strong>Union-Find Operations:</strong> Have a time complexity of <code>O(E ⋅ α(V))</code> and space complexity of <code>O(V)</code>.</li>
+        <li><strong>Total:</strong> The algorithm has a time complexity of <code>O(E log E)</code> and a space complexity of <code>O(V+E)</code>.</li>
+    </ul>
+    <li><strong>Implementation Benefits:</strong></li>
+    <ul>
+        <li>Minimizes transportation costs for distributing goods.</li>
+        <li>Improves accessibility between trade hubs, fostering economic growth.</li>
+        <li>Ensures efficient use of resources by preventing redundant connections.</li>
+        <li>Helps in creating a scalable and sustainable trade network.</li>
+    </ul>
 </ul>
 
 <h2>2. Cost-Effective Route Selection (Heap)</h2>
-<p><strong>Idea:</strong> Optimize operational logistics by selecting daily transport routes or scheduling shipments in a cost-effective manner using a Min-Heap.</p>
+<p><strong>Idea:</strong> Optimize operational logistics like selecting daily transport routes or scheduling shipments through cost-effective planning.</p>
 <p><strong>Description:</strong></p>
 <ul>
-    <li><strong>Implementation:</strong>
+    <li><strong>Min-Heap:</strong>
         <ul>
-            <li>Use a Min-Heap to store all transport routes, where the smallest cost route is always at the root.</li>
-            <li>Continuously extract and prioritize the cheaper routes, reducing overall transportation expenses.</li>
+            <li>Store all transport routes in a min-heap, where the smallest cost route is always at the root.</li>
+            <li>Continuously prioritize cheaper routes, reducing transportation expenses.</li>
         </ul>
     </li>
+    <li><strong>Efficiency:</strong></li>
+    <ul>
+        <li><strong>Heap Operations:</strong> 
+            <ul>
+                <li>Inserting a route into the heap takes <code>O(log N)</code>, where <code>N</code> is the number of routes.</li>
+                <li>Extracting the minimum cost route takes <code>O(log N)</code>.</li>
+                <li>Building the heap from <code>N</code> routes takes <code>O(N)</code>.</li>
+            </ul>
+        </li>
+        <li><strong>Total:</strong> The approach is highly efficient for real-time cost optimization, maintaining a time complexity of <code>O(log N)</code> for individual operations.</li>
+    </ul>
+    <li><strong>Implementation Benefits:</strong></li>
+    <ul>
+        <li>Reduces operational logistics costs significantly by prioritizing economical routes.</li>
+        <li>Enables dynamic route selection for changing schedules and requirements.</li>
+        <li>Improves decision-making efficiency in transportation planning.</li>
+    </ul>
 </ul>
 
 <h2>3. Load Balancing Across Markets (Partitioning)</h2>
-<p><strong>Idea:</strong> Address unequal demand for textiles and handicrafts in different regions by partitioning markets to ensure equitable distribution of resources and smooth operations.</p>
+<p><strong>Idea:</strong> Address unequal demand for textiles and handicrafts in different regions by balancing the load on trade hubs for equitable resource distribution and smooth operations.</p>
 <p><strong>Description:</strong></p>
 <ul>
-    <li><strong>Implementation:</strong>
+    <li><strong>Partitioning:</strong>
         <ul>
             <li>Divide markets into high-demand and low-demand groups based on historical data.</li>
             <li>Assign more vehicles, workforce, and inventory to high-demand hubs.</li>
-            <li>Gradually shift resources from low-demand hubs as needed.</li>
+            <li>Gradually shift resources from low-demand hubs as needed to maintain balance.</li>
         </ul>
     </li>
+    <li><strong>Efficiency:</strong></li>
+    <ul>
+        <li><strong>Grouping:</strong> Partitioning markets based on demand analysis takes <code>O(N)</code>, where <code>N</code> is the number of markets.</li>
+        <li><strong>Resource Allocation:</strong> Adjusting resources dynamically ensures smooth operations and reduces downtime.</li>
+    </ul>
+    <li><strong>Implementation Benefits:</strong></li>
+    <ul>
+        <li>Prevents overburdening of high-demand trade hubs, ensuring operational efficiency.</li>
+        <li>Improves equitable distribution of resources, enhancing customer satisfaction.</li>
+        <li>Enables adaptive planning by continuously monitoring and adjusting to demand changes.</li>
+    </ul>
 </ul>
 
  <h1> Improving Living Standards for Farmers</h1>
