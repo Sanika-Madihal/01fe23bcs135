@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class FenwickTree {
+private:
+    vector<int> bit; 
+    int n;
+public:
+    FenwickTree(int n) {
+        this->n = n;
+        bit.resize(n + 1, 0); 
+    }
+    void update(int k, int delta) {
+        for (; k <= n; k += (k & -k)) {
+            bit[k] += delta; 
+        }
+    }
+    int query(int k) {
+        int sum = 0;
+        for (; k > 0; k -= (k & -k)) {
+            sum += bit[k]; 
+        }
+        return sum;
+    }
+    int rangeQuery(int L, int R) {
+        return query(R) - query(L - 1);
+    }
+};
+int main() {
+    int n = 5; 
+    FenwickTree fenwick(n);
+    vector<int> energySupply = {100, 200, 150, 300, 250}; 
+    for (int i = 0; i < n; i++) {
+        fenwick.update(i + 1, energySupply[i]); 
+    }
+    cout << "Total energy supply in range [1, 3]: " << fenwick.rangeQuery(1, 3) << endl;
+    cout << "Total energy supply in range [2, 5]: " << fenwick.rangeQuery(2, 5) << endl; 
+    fenwick.update(3, 50); 
+    cout << "Total energy supply in range [1, 5] after solar power update in farm 3: " << fenwick.rangeQuery(1, 5) << endl;
+    fenwick.update(4, -100); 
+    cout << "Total energy supply in range [1, 5] after grid energy update in farm 4: " << fenwick.rangeQuery(1, 5) << endl;
+    return 0;
+}
