@@ -1,0 +1,55 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+class SustainableDisposal {
+private:
+    vector<string> disposalMethods = {"Recycling", "Composting", "Landfill", "Incineration"};
+    vector<string> wasteTypes = {"Organic", "Plastic", "Chemical"};
+    vector<string> selectedMethods;
+public:
+    void printSelectedMethods() {
+        cout << "Selected Disposal Methods: ";
+        for (const string& method : selectedMethods) {
+            cout << method << " ";
+        }
+        cout << endl;
+    }
+    bool backtrack(int wasteIndex) {
+        if (wasteIndex == wasteTypes.size()) {
+            printSelectedMethods();
+            return true;
+        }
+        string wasteType = wasteTypes[wasteIndex];
+        for (const string& method : disposalMethods) {
+            if (isValidDisposal(wasteType, method)) {
+                selectedMethods.push_back(method);
+                if (backtrack(wasteIndex + 1)) {
+                    return true;
+                }
+                selectedMethods.pop_back();
+            }
+        }
+        return false;
+    }
+    bool isValidDisposal(const string& wasteType, const string& method) {
+        if (wasteType == "Organic") {
+            return method == "Composting" || method == "Landfill"; 
+        }
+        else if (wasteType == "Plastic") {
+            return method == "Recycling" || method == "Landfill"; 
+        }
+        else if (wasteType == "Chemical") {
+            return method != "Landfill" && method != "Composting"; 
+        }
+        return false; 
+    }
+};
+int main() {
+    SustainableDisposal disposalSystem;
+    if (!disposalSystem.backtrack(0)) {
+        cout << "No valid disposal methods found." << endl;
+    }
+    return 0;
+}
