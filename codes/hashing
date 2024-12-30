@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+class HashTable {
+    pair<string, string>* table; 
+    int size;
+public:
+    HashTable(int s) {
+        size = s;
+        table = new pair<string, string>[size];
+        for (int i = 0; i < size; i++) {
+            table[i].first = "";
+            table[i].second = "";
+        }
+    }
+    int hashFunction(string key) {
+        int sum = 0;
+        for (char c : key) {
+            sum += c;
+        }
+        return sum % size; 
+    }
+    void insert(string wasteType, string treatmentMethod) {
+        int index = hashFunction(wasteType);
+        table[index] = make_pair(wasteType, treatmentMethod);
+    }
+    bool search(string wasteType) {
+        int index = hashFunction(wasteType);
+        return table[index].first == wasteType;
+    }
+    void display() {
+        for (int i = 0; i < size; i++) {
+            if (table[i].first != "") {
+                cout << "Waste Type: " << table[i].first << " | Treatment: " << table[i].second << endl;
+            }
+        }
+    }
+};
+int main() {
+    HashTable ht(10);
+    ht.insert("Dye Waste", "Chemical neutralization and water treatment");
+    ht.insert("Fabric Scraps", "Shredding and recycling");
+    ht.insert("Wastewater", "Filtration and treatment");
+    ht.display();
+    if (ht.search("Dye Waste")) {
+        cout << "Dye Waste found in the hash table!" << endl;
+    } else {
+        cout << "Dye Waste not found in the hash table." << endl;
+    }
+    return 0;
+}
