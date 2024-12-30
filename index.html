@@ -595,97 +595,95 @@
     </ul>
 </ul>
 
-
-<h2>5. Student and Faculty Management (Linked List, Binary Search Tree)</h2>
-<p><strong>Idea:</strong> Manage dynamic data about students, faculty, and staff, including shifts, roles, and activities.</p>
+<h2>5. Smart Land Use with AVL Tree</h2>
+<p><strong>Idea:</strong> Optimize land allocation in Chitranagari to ensure balanced and efficient use of resources for farming, housing, and community services using an AVL Tree. This approach supports sustainable development and long-term agricultural productivity.</p>
 <p><strong>Description:</strong></p>
 <ul>
-    <li><strong>Linked List:</strong> Use for dynamically managing student or faculty details, where data might change frequently (e.g., grades, shifts).</li>
-    <li><strong>Binary Search Tree (BST):</strong> Organize students or faculty members based on specific attributes like GPA or department.</li>
-    <li><strong>Design Techniques:</strong>
+    <li><strong>Represent Land Parcels in AVL Tree:</strong>
         <ul>
-            <li>Lazy Propagation: Update records only when necessary, especially in large institutions.</li>
-            <li>Time Efficiency: Linked list operations are O(1) for insertion and deletion, and BST operations take O(log n).</li>
-            <li>Space Efficiency: Linked lists and BSTs both require O(n) space.</li>
+            <li>Each land parcel is represented as a node in the AVL Tree, with attributes such as size or soil fertility.</li>
+            <li>The tree is kept balanced to maintain efficient insertion, deletion, and searching operations.</li>
         </ul>
     </li>
+    <li><strong>AVL Tree Operations:</strong>
+        <ul>
+            <li><strong>Insertion:</strong> Insert land parcels into the tree while ensuring the tree remains balanced.</li>
+            <li><strong>Search:</strong> Efficiently search for land parcels based on attributes such as size or soil fertility.</li>
+            <li><strong>Deletion:</strong> Remove land parcels from the tree and adjust the structure to preserve balance.</li>
+        </ul>
+    </li>
+    <li><strong>Efficiency:</strong>
+        <ul>
+            <li>The AVL Tree ensures <code>O(log N)</code> time complexity for insertion, searching, deletion, and updates, where <code>N</code> is the number of land parcels.</li>
+            <li>The space complexity is <code>O(N)</code>, where <code>N</code> is the number of land parcels in the tree.</li>
+        </ul>
+    </li>
+    <li><strong>Implementation Benefits:</strong></li>
+    <ul>
+        <li><strong>Efficient Land Allocation:</strong> By using an AVL Tree, land parcels can be allocated based on key attributes like soil fertility or size, optimizing land use for farming and other purposes.</li>
+        <li><strong>Balanced Distribution:</strong> The balanced structure of the AVL Tree ensures that land parcels are allocated in a way that avoids overuse or underutilization of resources.</li>
+        <li>Supports sustainable development by promoting efficient use of land for farming, housing, and community services.</li>
+        <li>Facilitates easy updates as new farms are established or existing ones are reassigned, ensuring the system reflects real-time changes.</li>
+        <li>Improves decision-making by providing quick access to information about available land parcels and their suitability for various purposes.</li>
+    </ul>
 </ul>
 
-<h2>6. Online Examination System (Queue/Deque)</h2>
-<p><strong>Idea:</strong> Manage the flow of students during online examinations, ensuring efficient exam scheduling and result processing.</p>
+<h2>6. Transport Optimization Using Bellman-Ford Algorithm</h2>
+<p><strong>Idea:</strong> Optimize transport routes for transporting goods from farms to markets in Chitranagari using the Bellman-Ford Algorithm to reduce costs and improve farmers' access to distant markets.</p>
 <p><strong>Description:</strong></p>
 <ul>
-    <li><strong>Queue:</strong> Manage students waiting for exam entry, ensuring fair processing in a First-In-First-Out (FIFO) manner.</li>
-    <li><strong>Deque:</strong> A double-ended queue can manage students entering or leaving the exam in different phases.</li>
-    <li><strong>Design Techniques:</strong>
+    <li><strong>Represent Transport Routes as a Graph:</strong>
         <ul>
-            <li>Lazy Propagation: Only update records when a student enters or exits the exam.</li>
-            <li>Time Efficiency: Queue and deque operations are O(1).</li>
-            <li>Space Efficiency: The space complexity is O(n).</li>
+            <li>Model the transport network as a graph, where villages and markets are represented as nodes, and roads or transport routes are edges.</li>
+            <li>The edges are weighted based on the transport cost or time, which can vary due to factors like fuel prices or tolls.</li>
         </ul>
     </li>
+    <li><strong>Apply Bellman-Ford Algorithm:</strong>
+        <ul>
+            <li>Use the Bellman-Ford Algorithm to calculate the shortest path from farms (source nodes) to markets (destination nodes) while considering fluctuating costs (e.g., fuel, tolls).</li>
+            <li>The algorithm will iteratively relax the edges, ensuring the least expensive route is found even with varying weights on edges.</li>
+        </ul>
+    </li>
+    <li><strong>Efficiency:</strong>
+        <ul>
+            <li>The Bellman-Ford Algorithm runs in <code>O(V * E)</code> time, where <code>V</code> is the number of nodes (villages and markets) and <code>E</code> is the number of edges (routes).</li>
+            <li>It is particularly useful when dealing with negative edge weights, making it flexible for various transport cost models.</li>
+        </ul>
+    </li>
+    <li><strong>Implementation Benefits:</strong></li>
+    <ul>
+        <li><strong>Cost-effective Logistics:</strong> By finding the cheapest transport routes, farmers can reduce their transportation costs, enabling them to keep more of their profits.</li>
+        <li><strong>Improved Market Access:</strong> The optimized routes make it easier for farmers to access distant markets, enhancing their sales opportunities and increasing income.</li>
+        <li>Reduces transportation time and improves the efficiency of the logistics system.</li>
+        <li>Supports sustainable farming practices by minimizing the cost and environmental impact of transportation.</li>
+        <li>Helps create a more competitive market for farmers by providing them with better access to larger markets.</li>
+    </ul>
 </ul>
 
-<h2>7. Performance Analytics (Fenwick Tree, Sparse Table)</h2>
-<p><strong>Idea:</strong> Track and analyze performance data such as exam scores, attendance, and project submissions.</p>
+<h2>7. Monitoring Progress with Sparse Table</h2>
+<p><strong>Idea:</strong> Use the Sparse Table technique to efficiently store and query historical data on farmers' productivity, income, and access to services, enabling targeted interventions and continuous improvements in Chitranagari.</p>
 <p><strong>Description:</strong></p>
 <ul>
-    <li><strong>Fenwick Tree:</strong> Track cumulative performance metrics such as total grades or attendance.</li>
-    <li><strong>Sparse Table:</strong> Efficiently query performance data across large datasets for static queries like overall exam performance.</li>
-    <li><strong>Design Techniques:</strong>
+    <li><strong>Store Records in Sparse Table:</strong>
         <ul>
-            <li>Fenwick Tree helps with cumulative performance tracking.</li>
-            <li>Sparse Table is ideal for static range queries.</li>
-            <li>Time Efficiency: Fenwick Tree operations take O(log n), and Sparse Table queries are O(1).</li>
-            <li>Space Efficiency: Both structures use O(n) space.</li>
+            <li>Store historical data such as farmer productivity, income growth, and access to services in a sparse table. Each record corresponds to a specific time period or set of farmers.</li>
+            <li>Sparse tables allow for efficient storage of this data, especially when dealing with large amounts of data with sparse updates, minimizing space usage while maintaining quick access.</li>
         </ul>
     </li>
-</ul>
-
-<h2>8. Scholarship Management (Priority Queue/Heap)</h2>
-<p><strong>Idea:</strong> Manage scholarships by prioritizing students based on merit, need, and other factors.</p>
-<p><strong>Description:</strong></p>
-<ul>
-    <li><strong>Min-Heap or Max-Heap:</strong> Use a heap to prioritize students for scholarships based on their scores or financial need.</li>
-    <li><strong>Design Techniques:</strong>
+    <li><strong>Sparse Table Operations:</strong>
         <ul>
-            <li>Greedy Technique: Allocate scholarships to the most eligible students based on priority.</li>
-            <li>Time Efficiency: Heap operations are O(log n).</li>
-            <li>Space Efficiency: The space complexity is O(n).</li>
+            <li><strong>Range Queries:</strong> Efficiently query the data to determine trends, performance gaps, and opportunities for resource allocation across different time periods or groups of farmers.</li>
+            <li><strong>Updates:</strong> Update records when there is a significant change in farmer performance or resource allocation, while keeping the data structure efficient.</li>
         </ul>
     </li>
+    <li><strong>Implementation Benefits:</strong></li>
+    <ul>
+        <li><strong>Data-driven Decision-making:</strong> Historical data on farmer productivity, income, and access to services enables informed decisions, allowing for targeted support and interventions where they are most needed.</li>
+        <li><strong>Improved Resource Allocation:</strong> The Sparse Table helps identify trends and performance gaps, guiding more efficient allocation of resources like irrigation, seeds, and financial support.</li>
+        <li><strong>Efficient Data Storage and Retrieval:</strong> By storing large amounts of data in a compact and efficient structure, the Sparse Table ensures that the system remains responsive even with significant data growth.</li>
+        <li><strong>Continuous Improvement:</strong> By monitoring farmer performance over time, Chitranagari can implement continuous improvements, boosting agricultural output and livelihoods.</li>
+    </ul>
 </ul>
-
-<h2>9. Course Recommendation System (Graph, Dynamic Programming)</h2>
-<p><strong>Idea:</strong> Recommend courses to students based on their past choices, interests, and academic performance.</p>
-<p><strong>Description:</strong></p>
-<ul>
-    <li><strong>Graph:</strong> Represent course prerequisites and student interests as a graph to recommend the next best course.</li>
-    <li><strong>Dynamic Programming:</strong> Use dynamic programming to find the optimal course selection based on prior selections and student preferences.</li>
-    <li><strong>Design Techniques:</strong>
-        <ul>
-            <li>Dynamic Programming can optimize the recommendation process.</li>
-            <li>Time Efficiency: The time complexity for dynamic programming is typically O(n²) or O(n log n) based on the problem size.</li>
-            <li>Space Efficiency: Space complexity is O(n) for storing previous results.</li>
-        </ul>
-    </li>
-</ul>
-
-<h2>10. Virtual Labs and Simulations (Queue/Deque, Graph)</h2>
-<p><strong>Idea:</strong> Manage virtual labs and simulations where students can conduct experiments in an online environment.</p>
-<p><strong>Description:</strong></p>
-<ul>
-    <li><strong>Queue/Deque:</strong> Manage the queue of students awaiting access to virtual labs or simulations.</li>
-    <li><strong>Graph:</strong> Model the experiments as a graph to track various steps in a virtual experiment.</li>
-    <li><strong>Design Techniques:</strong>
-        <ul>
-            <li>Lazy Propagation: Only update when the student enters or finishes an experiment.</li>
-            <li>Time Efficiency: Queue and deque operations are O(1).</li>
-            <li>Space Efficiency: The space complexity is O(n).</li>
-        </ul>
-    </li>
-</ul>
-
 
     <!-- Contact Section -->
     <div id="contact" class="section">
