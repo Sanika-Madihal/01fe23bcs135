@@ -295,52 +295,98 @@
     </li>
 </ul>
     
-    <h2>3. Sustainable Treatment using Dynamic Programming (DP)</h2>
-<p><strong>Idea:</strong> Optimize treatment costs for small-scale industries while maximizing recycling using dynamic programming.</p>
+   <h2>3. Sustainable Treatment using Dynamic Programming (DP)</h2>
+<p><strong>Idea:</strong> Minimize treatment costs for small-scale industries while maximizing recycling by dynamically selecting treatment options based on waste type and amount.</p>
 <p><strong>Description:</strong></p>
 <ul>
-    <li><strong>Implementation:</strong>
+    <li><strong>Dynamic Programming Approach:</strong>
         <ul>
-            <li>Based on the amount and type of waste (e.g., X kg of dye waste), determine treatment options (e.g., neutralization, incineration).</li>
+            <li><strong>States:</strong> Define states based on the amount and type of waste (e.g., X kg of dye waste).</li>
+            <li><strong>Transitions:</strong> Transition between states based on selected treatment options (e.g., neutralization, incineration).</li>
+            <li><strong>Objective:</strong> Minimize treatment cost <code>C</code> and environmental impact <code>E</code> while maximizing resource recovery <code>R</code>.</li>
         </ul>
     </li>
-    <li><strong>DP Objective:</strong>
+    <li><strong>Implementation:</strong>
         <ul>
-            <li>Minimize treatment cost and environmental impact (E) while maximizing resource recovery (R).</li>
+            <li>Define a cost function <code>DP[state]</code> to store the minimum cost for treating waste up to a given state.</li>
+            <li>Iterate through all waste types and amounts, updating <code>DP[state]</code> using the treatment option that minimizes cost and environmental impact.</li>
+            <li><strong>Time Complexity:</strong> Depends on the number of states and transitions, typically <code>O(states ⋅ transitions)</code>.</li>
+            <li><strong>Space Complexity:</strong> Depends on the storage of DP states, typically <code>O(states)</code>.</li>
+            <li><strong>Example:</strong> For X kg of dye waste, compute the costs of neutralization and incineration and choose the optimal path.</li>
+        </ul>
+    </li>
+    <li><strong>Implementation Benefits:</strong>
+        <ul>
+            <li>Minimizes treatment costs for small-scale industries.</li>
+            <li>Reduces environmental impact by selecting sustainable options.</li>
+            <li>Maximizes resource recovery, promoting circular economy practices.</li>
         </ul>
     </li>
 </ul>
 
-   <h2>4. Sustainable Disposal using Backtracking</h2>
-<p><strong>Idea:</strong> Ensure waste disposal methods align with SDG goals and prevent harm to agricultural fields using backtracking.</p>
+  <h2>4. Sustainable Disposal using Backtracking</h2>
+<p><strong>Idea:</strong> Ensure waste disposal methods align with SDG goals and avoid harm to agricultural fields by exploring all possible disposal options systematically.</p>
 <p><strong>Description:</strong></p>
 <ul>
+    <li><strong>Backtracking Approach:</strong>
+        <ul>
+            <li><strong>States:</strong> Define states based on the waste type and current disposal method (e.g., recycling, composting, landfill).</li>
+            <li><strong>Transitions:</strong> Transition between disposal methods for a given waste type while ensuring compliance with SDG goals.</li>
+            <li><strong>Pruning:</strong> Prune paths that lead to non-compliant solutions (e.g., methods that harm agricultural fields).</li>
+        </ul>
+    </li>
     <li><strong>Implementation:</strong>
         <ul>
-            <li>Backtracking explores all disposal options for a given waste type (e.g., recycling, composting, landfill).</li>
-            <li>Backtrack and prune paths that lead to non-compliant solutions.</li>
+            <li>Define a recursive function that explores all disposal options for a given waste type.</li>
+            <li>Check compliance with SDG goals at each step and backtrack if a non-compliant solution is encountered.</li>
+            <li><strong>Time Complexity:</strong> Depends on the number of disposal options and waste types, typically <code>O(options<sup>waste types</sup>)</code>.</li>
+            <li><strong>Space Complexity:</strong> Depends on the depth of the recursion, typically <code>O(waste types)</code>.</li>
+            <li><strong>Example:</strong> For chemical waste, explore recycling, composting, and landfill options, pruning paths that harm agricultural fields.</li>
+        </ul>
+    </li>
+    <li><strong>Implementation Benefits:</strong>
+        <ul>
+            <li>Ensures alignment with SDG goals for sustainable development.</li>
+            <li>Avoids environmental harm, especially to agricultural fields.</li>
+            <li>Promotes environmentally friendly and compliant disposal practices.</li>
         </ul>
     </li>
 </ul>
 
  <h2>5. Pollution Control using Lazy Propagation and Fenwick Tree</h2>
-<p><strong>Idea:</strong> Monitor pollution levels near industries, water bodies, and fields in real-time using efficient data structures.</p>
+<p><strong>Idea:</strong> Monitor pollution levels near industries, water bodies, and fields in real-time by optimizing data updates and hotspot identification.</p>
 <p><strong>Description:</strong></p>
 <ul>
-    <li><strong>Implementation:</strong>
+    <li><strong>Lazy Propagation:</strong>
         <ul>
-            <li><strong>Lazy Propagation:</strong> Update pollution metrics (e.g., air and water quality indices) only when a significant change is detected.</li>
-            <li><strong>Fenwick Tree:</strong> Maintain cumulative pollution data for quick identification of hotspots.</li>
+            <li><strong>Concept:</strong> Update pollution metrics (e.g., air and water quality indices) only when a significant change is detected, reducing unnecessary computations.</li>
+            <li><strong>Implementation:</strong> Use a lazy array to defer updates until necessary.</li>
         </ul>
     </li>
-    <li><strong>Complexities:</strong>
+    <li><strong>Fenwick Tree:</strong>
         <ul>
-            <li>Updating pollution data for a specific zone (e.g., adding pollution due to a new discharge) takes <code>O(log N)</code>.</li>
-            <li>The Fenwick Tree requires <code>O(N)</code> space, where <code>N</code> is the number of zones.</li>
+            <li><strong>Concept:</strong> Maintain cumulative pollution data for quick identification of pollution hotspots across zones.</li>
+            <li><strong>Implementation:</strong> 
+                <ul>
+                    <li>Build a Fenwick Tree to store cumulative pollution data for all zones.</li>
+                    <li>Update pollution levels for a specific zone (e.g., adding pollution due to a new discharge) in <code>O(log N)</code>.</li>
+                    <li>Query cumulative pollution data up to a specific zone in <code>O(log N)</code>.</li>
+                </ul>
+            </li>
+            <li><strong>Time Complexity:</strong> <code>O(log N)</code> for updates and queries.</li>
+            <li><strong>Space Complexity:</strong> <code>O(N)</code>, where <code>N</code> is the number of zones.</li>
+            <li><strong>Example:</strong> Add pollution data from a new industrial discharge and quickly identify zones with critical pollution levels.</li>
+        </ul>
+    </li>
+    <li><strong>Implementation Benefits:</strong>
+        <ul>
+            <li>Enables real-time monitoring of pollution levels across multiple zones.</li>
+            <li>Efficiently identifies hotspots for targeted pollution control measures.</li>
+            <li>Optimizes resource allocation for environmental management.</li>
         </ul>
     </li>
 </ul>
-    
+
      <h1>Import and Export of Goods</h1>
 <hr>
 <h2>1. Building a Trade Network (Kruskal’s Algorithm)</h2>
